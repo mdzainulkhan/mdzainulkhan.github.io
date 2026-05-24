@@ -1,4 +1,6 @@
-# Jainul Haq Khan — Portfolio
+# Md Jainul Haq Khan
+🌐 Portfolio - https://jainulhk.vercel.app/
+📧 jainulhk.dev@gmail.com
 
 Modern, high-performance portfolio built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
 
