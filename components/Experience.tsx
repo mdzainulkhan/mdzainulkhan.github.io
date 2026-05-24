@@ -1,169 +1,175 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Briefcase, Calendar } from 'lucide-react'
+import { Calendar, MapPin } from 'lucide-react'
 
-const experiences = [
+const exp = [
   {
-    role: 'Senior Frontend Developer',
-    company: 'Indai Technologies',
-    period: 'Aug 2024 – Present',
-    type: 'Full Time',
-    current: true,
-    highlights: [
-      'Developed scalable, responsive UI components using React.js, Next.js, Tailwind CSS for high-traffic apps',
-      'Engineered reusable component architecture with React Hooks, improving development efficiency by ~25%',
-      'Optimized performance using lazy loading & code splitting — Lighthouse scores 85–95+',
-      'Reduced page load time by up to 40%, improving Core Web Vitals and user engagement',
+    role:'Frontend Developer',
+    co:'Indai Technologies',
+    period:'Aug 2024 – Present',
+    loc:'Delhi NCR',
+    current:true,
+    pts:[
+      'Developed scalable, responsive frontend apps with React.js, Next.js & Tailwind CSS for high-traffic platforms',
+      'Engineered reusable component architecture with React Hooks, improving dev efficiency by ~25%',
+      'Optimized performance via lazy loading & code splitting — Lighthouse 85–95+ consistently',
+      'Reduced page load time by up to 40%, improving Core Web Vitals & user engagement',
       'Integrated 10+ REST APIs using Fetch/Axios for dynamic, data-driven interfaces',
-      'Maintained WCAG accessibility standards and SEO-friendly structure across all projects',
+      'Maintained WCAG accessibility standards & SEO-friendly structure across all projects',
     ],
-    tags: ['React.js', 'Next.js', 'Tailwind CSS', 'Lighthouse', 'Core Web Vitals'],
+    tags:['React.js','Next.js','Tailwind CSS','TypeScript','Core Web Vitals','REST APIs'],
   },
   {
-    role: 'Frontend Developer',
-    company: 'Infoicon Technologies',
-    period: 'Sep 2023 – Jul 2024',
-    type: 'Full Time',
-    current: false,
-    highlights: [
+    role:'Frontend Developer',
+    co:'Infoicon Technologies',
+    period:'Sep 2023 – Jul 2024',
+    loc:'Delhi NCR',
+    current:false,
+    pts:[
       'Delivered responsive & pixel-accurate UI for 25+ projects using React.js, HTML5, CSS3 & Bootstrap',
-      'Improved page performance by ~30% through asset optimization and efficient rendering',
+      'Improved page performance by ~30% through asset optimization & efficient rendering',
       'Built reusable component libraries, reducing development redundancy by ~20%',
-      'Implemented WCAG & ARIA accessibility, improving usability and compliance',
-      'Coordinated with clients and cross-functional teams to deliver projects on schedule',
+      'Implemented WCAG & ARIA standards, improving usability & compliance',
+      'Coordinated with clients & cross-functional teams for on-time delivery',
     ],
-    tags: ['React.js', 'HTML5', 'CSS3', 'Bootstrap', 'WCAG'],
+    tags:['React.js','HTML5','CSS3','Bootstrap','WCAG','ARIA'],
   },
   {
-    role: 'Frontend Developer',
-    company: 'Cliffex Software Solutions',
-    period: 'Oct 2022 – Sep 2023',
-    type: 'Full Time',
-    current: false,
-    highlights: [
-      'Transitioned from web design to frontend development with React.js and modern JavaScript',
-      'Converted Figma, Adobe XD, and PSD designs into responsive, cross-browser compatible interfaces',
-      'Improved application routing and performance for faster loads and smoother navigation',
-      'Ensured mobile-first design consistency across multiple devices and screen sizes',
+    role:'Frontend Developer',
+    co:'Cliffex Software Solutions',
+    period:'Oct 2022 – Sep 2023',
+    loc:'Delhi NCR',
+    current:false,
+    pts:[
+      'Transitioned from web design to frontend dev — React.js & modern JavaScript',
+      'Converted Figma, Adobe XD & PSD designs into responsive cross-browser interfaces',
+      'Improved routing & performance for faster loads and smoother navigation',
+      'Ensured mobile-first design consistency across all devices & screen sizes',
     ],
-    tags: ['React.js', 'JavaScript', 'Figma', 'Mobile-First'],
+    tags:['React.js','JavaScript','Figma','Adobe XD','Mobile-First'],
   },
   {
-    role: 'Senior Web Designer',
-    company: 'B. Jain Publishers',
-    period: 'May 2021 – Oct 2022',
-    type: 'Full Time',
-    current: false,
-    highlights: [
+    role:'Senior Web Designer',
+    co:'B. Jain Publishers',
+    period:'May 2021 – Oct 2022',
+    loc:'Delhi NCR',
+    current:false,
+    pts:[
       'Designed & developed responsive UI for eCommerce & publishing platforms',
-      'Reduced bounce rate by 18% through targeted UI enhancements and SEO optimization',
-      'Developed dynamic pages using Next.js with server-side rendering (SSR)',
-      'Converted PSD/XD mockups into responsive HTML/CSS pages with pixel accuracy',
+      'Reduced bounce rate by 18% through UI enhancements & SEO optimization',
+      'Developed scalable frontend apps using React.js for improved performance',
+      'Converted PSD/XD designs into pixel-perfect, responsive HTML/CSS interfaces',
     ],
-    tags: ['Next.js', 'SSR', 'SEO', 'UI Design', 'HTML/CSS'],
+    tags:['React.js','UI Design','SEO','HTML/CSS','eCommerce'],
   },
   {
-    role: 'Web Designer',
-    company: 'Goyal Brothers Prakashan',
-    period: 'Jul 2018 – May 2021',
-    type: 'Full Time',
-    current: false,
-    highlights: [
-      'Specialized in PSD-to-HTML conversion for 50+ publications with pixel accuracy',
-      'Designed UI assets including banners, landing pages & marketing creatives',
+    role:'Web Designer',
+    co:'Goyal Brothers Prakashan',
+    period:'Jul 2018 – May 2021',
+    loc:'Delhi NCR',
+    current:false,
+    pts:[
+      'PSD-to-HTML conversion for 25+ publications with pixel accuracy',
+      'Designed banners, landing pages & marketing creatives for digital campaigns',
       'Implemented SEO-friendly semantic HTML to improve search visibility',
-      'Maintained mobile responsiveness and cross-browser compatibility',
+      'Maintained mobile responsiveness & cross-browser compatibility',
     ],
-    tags: ['PSD to HTML', 'SEO', 'Semantic HTML', 'Cross-Browser'],
+    tags:['HTML/CSS','SEO','PSD to HTML','Photoshop','Responsive'],
   },
 ]
 
 export default function Experience() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 })
+  const [ref, inView] = useInView({ triggerOnce:true, threshold:0.04 })
 
   return (
     <section id="experience" className="py-28 relative" ref={ref}>
-      <div className="section-separator" />
-      <div className="max-w-7xl mx-auto px-6 pt-8">
+      <div className="sep mb-1"/>
+      <div className="max-w-6xl mx-auto px-6 pt-10">
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="mb-16"
-        >
-          <p className="section-tag mb-3">My journey</p>
-          <h2 className="font-display text-4xl md:text-5xl font-700 text-white">
-            Work <span className="gradient-text">Experience</span>
+        <motion.div initial={{opacity:0,y:28}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.7}} className="mb-14">
+          <p className="stag mb-3">My journey</p>
+          <h2 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(32px,5vw,48px)', fontWeight:700, color:'#fff' }}>
+            Work <span className="g-text">Experience</span>
           </h2>
         </motion.div>
 
-        <div className="relative">
-          {/* Timeline vertical line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px timeline-line hidden md:block" />
+        <div style={{ position:'relative' }}>
+          {/* Timeline line */}
+          <div className="tline" style={{ position:'absolute', left:'32px', top:0, bottom:0,
+            width:'2px', display:'none' }} className="hidden md:block tline"/>
 
-          <div className="space-y-8">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.company}
-                initial={{ opacity: 0, x: -30 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-                className="md:pl-24 relative"
+          <div style={{ display:'flex', flexDirection:'column', gap:'20px' }}>
+            {exp.map((e,i)=>(
+              <motion.div key={e.co}
+                initial={{opacity:0,x:-24}} animate={inView?{opacity:1,x:0}:{}}
+                transition={{duration:0.7,delay:i*0.09}}
+                style={{ paddingLeft:'0' }} className="md:pl-20"
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-5 top-6 w-6 h-6 rounded-full border-2 items-center justify-center hidden md:flex ${
-                  exp.current
-                    ? 'bg-primary border-primary shadow-[0_0_15px_rgba(0,212,255,0.6)]'
-                    : 'bg-dark-3 border-primary/30'
-                }`}>
-                  {exp.current && <div className="w-2 h-2 rounded-full bg-white" />}
+                <div style={{
+                  position:'absolute', left:'10px', marginTop:'10px',
+                  width:'22px', height:'22px', borderRadius:'50%', zIndex:2,
+                  background: e.current ? '#050B18' : '#050B18',
+                  border: e.current ? '2px solid #00C6FF' : '2px solid rgba(0,198,255,0.3)',
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  boxShadow: e.current ? '0 0 16px rgba(0,198,255,0.5)' : 'none',
+                }} className="hidden md:flex">
+                  {e.current && <div style={{ width:8,height:8,borderRadius:'50%',background:'#00C6FF' }}/>}
                 </div>
 
-                <div className={`glass rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 glow-box-hover ${
-                  exp.current ? 'border-primary/20' : 'border-white/5'
-                }`}>
+                <div className="gcard" style={{ padding:'24px' }}>
                   {/* Header */}
-                  <div className="flex flex-wrap gap-3 justify-between items-start mb-4">
+                  <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between',
+                    alignItems:'flex-start', gap:'10px', marginBottom:'16px' }}>
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        {exp.current && (
-                          <span className="text-xs bg-primary/15 text-primary border border-primary/20 rounded-full px-3 py-0.5 font-mono">
-                            Current
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-display text-xl font-600 text-white">{exp.role}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Briefcase size={13} className="text-primary/70" />
-                        <span className="text-primary/90 font-mono text-sm">{exp.company}</span>
-                      </div>
+                      {e.current && (
+                        <span style={{ display:'inline-flex', alignItems:'center', gap:'5px',
+                          background:'rgba(0,198,255,0.1)', border:'1px solid rgba(0,198,255,0.25)',
+                          borderRadius:'100px', padding:'3px 10px', fontSize:'11px',
+                          fontFamily:'JetBrains Mono', color:'#00C6FF', marginBottom:'6px' }}>
+                          <span style={{ width:6,height:6,borderRadius:'50%',background:'#22C55E',
+                            animation:'pulseGlow 2s ease-in-out infinite' }}/>
+                          Current
+                        </span>
+                      )}
+                      <h3 style={{ fontFamily:'Space Grotesk', fontSize:'19px', fontWeight:700,
+                        color:'#fff', marginBottom:'4px' }}>{e.role}</h3>
+                      <p style={{ fontFamily:'JetBrains Mono', fontSize:'13px', color:'#00C6FF' }}>
+                        {e.co}
+                      </p>
                     </div>
-                    <div className="flex items-center gap-2 text-white/40 text-sm font-mono">
-                      <Calendar size={13} />
-                      {exp.period}
+                    <div style={{ display:'flex', flexDirection:'column', gap:'4px', alignItems:'flex-end' }}>
+                      <span style={{ display:'flex', alignItems:'center', gap:'5px',
+                        fontFamily:'JetBrains Mono', fontSize:'12px', color:'rgba(255,255,255,0.35)' }}>
+                        <Calendar size={12}/>{e.period}
+                      </span>
+                      <span style={{ display:'flex', alignItems:'center', gap:'5px',
+                        fontFamily:'JetBrains Mono', fontSize:'11px', color:'rgba(255,255,255,0.2)' }}>
+                        <MapPin size={11}/>{e.loc}
+                      </span>
                     </div>
                   </div>
 
-                  {/* Highlights */}
-                  <ul className="space-y-2 mb-4">
-                    {exp.highlights.map((h, hi) => (
-                      <li key={hi} className="flex gap-3 text-white/60 text-sm leading-relaxed">
-                        <span className="text-primary/60 mt-0.5 shrink-0">▸</span>
-                        {h}
+                  {/* Points */}
+                  <ul style={{ display:'flex', flexDirection:'column', gap:'8px', marginBottom:'16px' }}>
+                    {e.pts.map((pt,pi)=>(
+                      <li key={pi} style={{ display:'flex', gap:'10px',
+                        color:'rgba(203,213,225,0.6)', fontSize:'14px', lineHeight:'1.65', fontFamily:'Inter' }}>
+                        <span style={{ color:'rgba(0,198,255,0.5)', marginTop:'2px', flexShrink:0 }}>▸</span>
+                        {pt}
                       </li>
                     ))}
                   </ul>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {exp.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs font-mono px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/50"
-                      >
-                        {tag}
+                  <div style={{ display:'flex', flexWrap:'wrap', gap:'6px', borderTop:'1px solid rgba(255,255,255,0.05)', paddingTop:'14px' }}>
+                    {e.tags.map(t=>(
+                      <span key={t} style={{ fontFamily:'JetBrains Mono', fontSize:'11px',
+                        padding:'3px 10px', borderRadius:'100px',
+                        background:'rgba(255,255,255,0.04)', border:'1px solid rgba(255,255,255,0.08)',
+                        color:'rgba(255,255,255,0.4)' }}>
+                        {t}
                       </span>
                     ))}
                   </div>

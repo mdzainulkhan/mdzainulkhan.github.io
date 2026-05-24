@@ -2,41 +2,29 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Jainul Haq Khan | Senior Frontend Developer',
-  description: 'Senior Frontend Developer with 7+ years of experience in React.js, Next.js & modern web technologies. Based in Delhi NCR.',
+  title: 'Md Jainul Haq Khan | Frontend Developer | React.js & Next.js Developer',
+  description: 'Frontend Developer with 7+ years of experience in React.js, Next.js, and modern web technologies. Based in Delhi NCR. Immediate Joiner.',
   keywords: [
-    'Senior Frontend Developer',
-    'React.js Developer',
-    'Next.js Developer',
-    'UI Developer',
-    'JavaScript Developer',
-    'Tailwind CSS',
-    'Web Performance',
-    'Delhi NCR Developer',
-    'Jainul Haq Khan',
-    'Frontend Engineer India',
+    'Frontend Developer','React.js Developer','Next.js Developer',
+    'UI Developer Delhi NCR','JavaScript Developer','Tailwind CSS',
+    'Core Web Vitals','Md Jainul Haq Khan','React Next.js India',
+    'Senior Frontend Engineer','TypeScript Developer',
   ],
-  authors: [{ name: 'Md Jainul Haq Khan' }],
+  authors: [{ name: 'Md Jainul Haq Khan', url: 'mailto:jainulhk.dev@gmail.com' }],
   openGraph: {
-    title: 'Jainul Haq Khan | Senior Frontend Developer',
-    description: 'Senior Frontend Developer specializing in React.js, Next.js, and high-performance web applications.',
+    title: 'Md Jainul Haq Khan | Frontend Developer | React.js & Next.js Developer',
+    description: 'Frontend Developer specializing in React.js, Next.js & high-performance web apps.',
     type: 'website',
-    locale: 'en_IN',
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="font-body antialiased">{children}</body>
+      <head>
+        <link rel="icon" href="/profile.jpg" type="image/jpeg" />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }

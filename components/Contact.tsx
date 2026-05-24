@@ -5,167 +5,143 @@ import { useState } from 'react'
 import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from 'lucide-react'
 
 export default function Contact() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  const [ref, inView] = useInView({ triggerOnce:true, threshold:0.08 })
+  const [form, setForm] = useState({ name:'', email:'', subject:'', message:'' })
   const [sent, setSent] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoLink = `mailto:jainulhk.dev@gmail.com?subject=${encodeURIComponent(form.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Hi Jainul,\n\nMy name is ${form.name}.\n\n${form.message}\n\nContact: ${form.email}`)}`
-    window.location.href = mailtoLink
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
+    window.location.href = `mailto:jainulhk.dev@gmail.com?subject=${encodeURIComponent(form.subject||'Portfolio Inquiry')}&body=${encodeURIComponent(`Hi Jainul,\n\nMy name is ${form.name}.\n\n${form.message}\n\nContact: ${form.email}`)}`
+    setSent(true); setTimeout(()=>setSent(false),3000)
   }
 
-  const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'jainulhk.dev@gmail.com', href: 'mailto:jainulhk.dev@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 76319 75588', href: 'tel:+917631975588' },
-    { icon: MapPin, label: 'Location', value: 'Delhi NCR, India', href: null },
-  ]
-
-  const socials = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com/mdzainulkhan', handle: 'mdzainulkhan' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/jainulkhan', handle: 'jainulkhan' },
-  ]
+  const inputStyle = {
+    width:'100%', background:'rgba(255,255,255,0.04)',
+    border:'1px solid rgba(255,255,255,0.09)', borderRadius:'10px',
+    padding:'12px 16px', color:'#fff', fontSize:'14px', fontFamily:'Inter',
+    outline:'none', transition:'all 0.25s',
+  }
 
   return (
     <section id="contact" className="py-28 relative" ref={ref}>
-      <div className="section-separator" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-2/50 to-transparent pointer-events-none" />
+      <div className="sep mb-1"/>
+      <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg, transparent, rgba(10,22,40,0.3), transparent)', pointerEvents:'none' }}/>
+      <div className="max-w-6xl mx-auto px-6 pt-10 relative z-10">
 
-      <div className="max-w-7xl mx-auto px-6 pt-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
-        >
-          <p className="section-tag mb-3">Let's work together</p>
-          <h2 className="font-display text-4xl md:text-5xl font-700 text-white">
-            Get In <span className="gradient-text">Touch</span>
+        <motion.div initial={{opacity:0,y:28}} animate={inView?{opacity:1,y:0}:{}}
+          transition={{duration:0.7}} style={{ textAlign:'center', marginBottom:'56px' }}>
+          <p className="stag mb-3">Let's work together</p>
+          <h2 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(32px,5vw,48px)', fontWeight:700, color:'#fff', marginBottom:'12px' }}>
+            Get In <span className="g-text">Touch</span>
           </h2>
-          <p className="text-white/50 mt-4 max-w-lg mx-auto font-body">
-            I'm available for new opportunities. Whether it's a full-time role or freelance project — let's talk!
+          <p style={{ color:'rgba(203,213,225,0.45)', fontFamily:'Inter', fontSize:'15px', maxWidth:'460px', margin:'0 auto 16px' }}>
+            Open to full-time roles & freelance projects. Let's build something great together.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-mono text-green-400">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          <span style={{ display:'inline-flex', alignItems:'center', gap:'7px',
+            background:'rgba(10,22,40,0.8)', border:'1px solid rgba(34,197,94,0.25)',
+            borderRadius:'100px', padding:'6px 16px', fontFamily:'JetBrains Mono',
+            fontSize:'11px', color:'rgba(34,197,94,0.8)' }}>
+            <span style={{ width:7,height:7,borderRadius:'50%',background:'#22C55E',
+              animation:'pulseGlow 2s ease-in-out infinite' }}/>
             Available · Immediate Joiner
-          </div>
+          </span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left — contact info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <div className="space-y-4 mb-10">
-              {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                <div key={label} className="glass rounded-xl p-4 border border-white/5 flex items-center gap-4 hover:border-primary/20 transition-colors group">
-                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                    <Icon size={18} className="text-primary" />
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:'40px', alignItems:'start' }}>
+
+          {/* Info */}
+          <motion.div initial={{opacity:0,x:-28}} animate={inView?{opacity:1,x:0}:{}} transition={{duration:0.7,delay:0.2}}>
+            <div style={{ display:'flex', flexDirection:'column', gap:'10px', marginBottom:'28px' }}>
+              {[
+                {Icon:Mail,label:'Email',v:'jainulhk.dev@gmail.com',href:'mailto:jainulhk.dev@gmail.com'},
+                {Icon:Phone,label:'Phone',v:'+91 76319 75588',href:'tel:+917631975588'},
+                {Icon:MapPin,label:'Location',v:'Delhi NCR, India',href:null},
+              ].map(({Icon,label,v,href})=>(
+                <div key={label} className="gcard" style={{ padding:'16px', display:'flex', gap:'14px', alignItems:'center' }}>
+                  <div style={{ width:38,height:38,borderRadius:'10px',background:'rgba(0,198,255,0.08)',
+                    border:'1px solid rgba(0,198,255,0.18)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>
+                    <Icon size={17} style={{color:'#00C6FF'}}/>
                   </div>
                   <div>
-                    <div className="text-white/40 text-xs font-mono mb-0.5">{label}</div>
-                    {href ? (
-                      <a href={href} className="text-white group-hover:text-primary transition-colors text-sm font-500">
-                        {value}
-                      </a>
-                    ) : (
-                      <span className="text-white text-sm">{value}</span>
-                    )}
+                    <div style={{ fontFamily:'JetBrains Mono',fontSize:'10px',color:'rgba(255,255,255,0.3)',marginBottom:'2px' }}>{label}</div>
+                    {href
+                      ? <a href={href} style={{ color:'#fff',fontSize:'14px',fontFamily:'Inter',fontWeight:500,textDecoration:'none',transition:'color 0.2s' }}
+                          onMouseEnter={e=>(e.currentTarget.style.color='#00C6FF')}
+                          onMouseLeave={e=>(e.currentTarget.style.color='#fff')}>{v}</a>
+                      : <span style={{ color:'#fff',fontSize:'14px',fontFamily:'Inter' }}>{v}</span>
+                    }
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="space-y-3">
-              <p className="text-white/40 text-xs font-mono uppercase tracking-widest mb-4">Social Profiles</p>
-              {socials.map(({ icon: Icon, label, href, handle }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glass rounded-xl p-4 border border-white/5 flex items-center gap-4 hover:border-primary/20 hover:-translate-x-1 transition-all group block"
-                >
-                  <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0">
-                    <Icon size={18} className="text-white/60 group-hover:text-primary transition-colors" />
-                  </div>
-                  <div>
-                    <div className="text-white/40 text-xs font-mono">{label}</div>
-                    <div className="text-white/70 group-hover:text-primary transition-colors text-sm font-mono">
-                      /{handle}
-                    </div>
-                  </div>
-                  <span className="ml-auto text-white/20 group-hover:text-primary transition-colors">→</span>
-                </a>
-              ))}
-            </div>
+            <p style={{ fontFamily:'JetBrains Mono',fontSize:'10px',color:'rgba(255,255,255,0.3)',
+              letterSpacing:'3px',textTransform:'uppercase',marginBottom:'12px' }}>Profiles</p>
+            {[
+              {Icon:Github,label:'GitHub',href:'https://github.com/mdzainulkhan',h:'mdzainulkhan'},
+              {Icon:Linkedin,label:'LinkedIn',href:'https://linkedin.com/in/jainulkhan',h:'jainulkhan'},
+            ].map(({Icon,label,href,h})=>(
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                className="gcard"
+                style={{ display:'flex',alignItems:'center',gap:'14px',padding:'14px',
+                  marginBottom:'8px',textDecoration:'none',transition:'all 0.25s' }}
+                onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.borderColor='rgba(0,198,255,0.28)'}}
+                onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.borderColor='rgba(0,198,255,0.12)'}}>
+                <div style={{ width:36,height:36,borderRadius:'10px',background:'rgba(255,255,255,0.05)',
+                  display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>
+                  <Icon size={17} style={{color:'rgba(255,255,255,0.5)'}}/>
+                </div>
+                <div>
+                  <div style={{ fontFamily:'JetBrains Mono',fontSize:'10px',color:'rgba(255,255,255,0.28)',marginBottom:'1px' }}>{label}</div>
+                  <div style={{ fontFamily:'JetBrains Mono',fontSize:'13px',color:'rgba(255,255,255,0.6)' }}>/{h}</div>
+                </div>
+                <span style={{ marginLeft:'auto',color:'rgba(255,255,255,0.2)',fontSize:'16px' }}>→</span>
+              </a>
+            ))}
           </motion.div>
 
-          {/* Right — contact form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.3 }}
-          >
-            <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 border border-white/5">
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                {['name', 'email'].map((field) => (
-                  <div key={field}>
-                    <label className="block text-xs font-mono text-white/40 mb-2 capitalize">{field}</label>
-                    <input
-                      type={field === 'email' ? 'email' : 'text'}
-                      required
-                      placeholder={field === 'name' ? 'Your name' : 'your@email.com'}
-                      value={form[field as keyof typeof form]}
-                      onChange={(e) => setForm({ ...form, [field]: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white/90 text-sm placeholder:text-white/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all font-body"
+          {/* Form */}
+          <motion.div initial={{opacity:0,x:28}} animate={inView?{opacity:1,x:0}:{}} transition={{duration:0.7,delay:0.3}}>
+            <form onSubmit={submit} className="gcard" style={{ padding:'28px' }}>
+              <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginBottom:'12px' }}>
+                {['name','email'].map(f=>(
+                  <div key={f}>
+                    <label style={{ display:'block',fontFamily:'JetBrains Mono',fontSize:'10px',
+                      color:'rgba(255,255,255,0.35)',marginBottom:'7px',textTransform:'capitalize',letterSpacing:'1px' }}>{f}</label>
+                    <input type={f==='email'?'email':'text'} required
+                      placeholder={f==='name'?'Your name':'your@email.com'}
+                      value={form[f as keyof typeof form]}
+                      onChange={e=>setForm({...form,[f]:e.target.value})}
+                      style={inputStyle}
+                      onFocus={e=>{e.target.style.borderColor='rgba(0,198,255,0.4)';e.target.style.background='rgba(0,198,255,0.04)'}}
+                      onBlur={e=>{e.target.style.borderColor='rgba(255,255,255,0.09)';e.target.style.background='rgba(255,255,255,0.04)'}}
                     />
                   </div>
                 ))}
               </div>
-
-              <div className="mb-4">
-                <label className="block text-xs font-mono text-white/40 mb-2">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Job Opportunity / Freelance Project"
-                  value={form.subject}
-                  onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white/90 text-sm placeholder:text-white/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all font-body"
+              <div style={{ marginBottom:'12px' }}>
+                <label style={{ display:'block',fontFamily:'JetBrains Mono',fontSize:'10px',
+                  color:'rgba(255,255,255,0.35)',marginBottom:'7px',letterSpacing:'1px' }}>SUBJECT</label>
+                <input type="text" placeholder="Job Opportunity / Freelance"
+                  value={form.subject} onChange={e=>setForm({...form,subject:e.target.value})}
+                  style={inputStyle}
+                  onFocus={e=>{e.target.style.borderColor='rgba(0,198,255,0.4)';e.target.style.background='rgba(0,198,255,0.04)'}}
+                  onBlur={e=>{e.target.style.borderColor='rgba(255,255,255,0.09)';e.target.style.background='rgba(255,255,255,0.04)'}}
                 />
               </div>
-
-              <div className="mb-6">
-                <label className="block text-xs font-mono text-white/40 mb-2">Message</label>
-                <textarea
-                  required
-                  rows={5}
-                  placeholder="Tell me about the opportunity..."
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white/90 text-sm placeholder:text-white/20 focus:outline-none focus:border-primary/40 focus:bg-primary/5 transition-all resize-none font-body"
+              <div style={{ marginBottom:'20px' }}>
+                <label style={{ display:'block',fontFamily:'JetBrains Mono',fontSize:'10px',
+                  color:'rgba(255,255,255,0.35)',marginBottom:'7px',letterSpacing:'1px' }}>MESSAGE</label>
+                <textarea required rows={5} placeholder="Tell me about the opportunity..."
+                  value={form.message} onChange={e=>setForm({...form,message:e.target.value})}
+                  style={{...inputStyle,resize:'none'}}
+                  onFocus={e=>{e.target.style.borderColor='rgba(0,198,255,0.4)';e.target.style.background='rgba(0,198,255,0.04)'}}
+                  onBlur={e=>{e.target.style.borderColor='rgba(255,255,255,0.09)';e.target.style.background='rgba(255,255,255,0.04)'}}
                 />
               </div>
-
-              <button
-                type="submit"
-                className="w-full btn-primary flex items-center justify-center gap-2"
-              >
-                {sent ? (
-                  <>
-                    <CheckCircle size={18} />
-                    Opening mail client...
-                  </>
-                ) : (
-                  <>
-                    <Send size={18} />
-                    Send Message
-                  </>
-                )}
+              <button type="submit" className="btn-p" style={{ width:'100%', justifyContent:'center' }}>
+                <span>{sent?'Opening mail client...':'Send Message'}</span>
+                {sent ? <CheckCircle size={16}/> : <Send size={16}/>}
               </button>
             </form>
           </motion.div>

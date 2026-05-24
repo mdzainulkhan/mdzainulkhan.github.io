@@ -2,42 +2,46 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="relative border-t border-white/5 py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer style={{ borderTop:'1px solid rgba(255,255,255,0.05)', padding:'36px 0' }}>
+      <div className="max-w-6xl mx-auto px-6">
+        <div style={{ display:'flex', flexWrap:'wrap', alignItems:'center',
+          justifyContent:'space-between', gap:'20px' }}>
           <div>
-            <div className="font-display text-xl font-800 mb-1">
-              <span className="gradient-text">JHK</span>
-              <span className="text-white/20 mx-1">·</span>
-              <span className="text-white/40 text-sm font-normal font-body">Jainul Haq Khan</span>
+            <div style={{ fontFamily:'Space Grotesk', fontSize:'18px', fontWeight:700, marginBottom:'4px' }}>
+              <span className="g-text">JHK</span>
+              <span style={{ color:'rgba(255,255,255,0.2)', margin:'0 8px' }}>·</span>
+              <span style={{ color:'rgba(255,255,255,0.35)', fontSize:'13px', fontWeight:400, fontFamily:'Inter' }}>
+                Jainul Haq Khan
+              </span>
             </div>
-            <p className="text-white/30 text-sm font-mono">Senior Frontend Developer · Delhi NCR</p>
+            <p style={{ fontFamily:'JetBrains Mono', color:'rgba(255,255,255,0.25)', fontSize:'11px' }}>
+              Frontend Developer · React.js & Next.js · Delhi NCR
+            </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div style={{ display:'flex', gap:'10px' }}>
             {[
-              { icon: Github, href: 'https://github.com/mdzainulkhan' },
-              { icon: Linkedin, href: 'https://linkedin.com/in/jainulkhan' },
-              { icon: Mail, href: 'mailto:jainulhk.dev@gmail.com' },
-            ].map(({ icon: Icon, href }, i) => (
-              <a
-                key={i}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 glass rounded-lg flex items-center justify-center text-white/40 hover:text-primary hover:border-primary/30 transition-all"
-              >
-                <Icon size={16} />
+              {Icon:Github,href:'https://github.com/mdzainulkhan'},
+              {Icon:Linkedin,href:'https://linkedin.com/in/jainulkhan'},
+              {Icon:Mail,href:'mailto:jainulhk.dev@gmail.com'},
+            ].map(({Icon,href},i)=>(
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                style={{ width:36,height:36,borderRadius:'9px',
+                  background:'rgba(255,255,255,0.04)', border:'1px solid rgba(255,255,255,0.07)',
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  color:'rgba(255,255,255,0.4)', textDecoration:'none', transition:'all 0.25s' }}
+                onMouseEnter={e=>{const el=e.currentTarget as HTMLElement; el.style.color='#00C6FF'; el.style.borderColor='rgba(0,198,255,0.3)'}}
+                onMouseLeave={e=>{const el=e.currentTarget as HTMLElement; el.style.color='rgba(255,255,255,0.4)'; el.style.borderColor='rgba(255,255,255,0.07)'}}>
+                <Icon size={15}/>
               </a>
             ))}
           </div>
 
-          <p className="text-white/25 text-sm font-mono flex items-center gap-1.5">
-            © {currentYear} · Built with
-            <Heart size={12} className="text-primary/60" />
+          <p style={{ fontFamily:'JetBrains Mono', color:'rgba(255,255,255,0.2)', fontSize:'11px',
+            display:'flex', alignItems:'center', gap:'5px' }}>
+            © {new Date().getFullYear()} · Built with
+            <Heart size={11} style={{color:'rgba(0,198,255,0.5)'}}/>
             Next.js & Tailwind
           </p>
         </div>
