@@ -96,8 +96,10 @@ export default function Experience() {
 
         <div style={{ position:'relative' }}>
           {/* Timeline line */}
-          <div className="tline" style={{ position:'absolute', left:'32px', top:0, bottom:0,
-            width:'2px', display:'none' }} className="hidden md:block tline"/>
+          <div
+            className="hidden md:block tline"
+            style={{ position:'absolute', left:'32px', top:0, bottom:0, width:'2px', display:'none' }}
+          />
 
           <div style={{ display:'flex', flexDirection:'column', gap:'20px' }}>
             {exp.map((e,i)=>(
