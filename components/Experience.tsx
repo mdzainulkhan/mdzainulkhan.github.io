@@ -87,7 +87,7 @@ export default function Experience() {
       <div className="sep mb-1"/>
       <div className="max-w-6xl mx-auto px-6 pt-10">
 
-        <motion.div initial={{opacity:0,y:28}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.7}} className="mb-14">
+        <motion.div initial={{opacity:0,y:28}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.6}} className="mb-14">
           <p className="stag mb-3">My journey</p>
           <h2 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(32px,5vw,48px)', fontWeight:700, color:'#fff' }}>
             Work <span className="g-text">Experience</span>
