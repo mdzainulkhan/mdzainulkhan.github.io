@@ -55,7 +55,7 @@ export default function Contact() {
               {[
                 {Icon:Mail,label:'Email',v:'jainulhk.dev@gmail.com',href:'mailto:jainulhk.dev@gmail.com'},
                 {Icon:Phone,label:'Phone',v:'+91 76319 75588',href:'tel:+917631975588'},
-                {Icon:MapPin,label:'Location',v:'Delhi NCR, India',href:null},
+                {Icon:MapPin,label:'Location',v:'Noida, Delhi NCR, India',href:null},
               ].map(({Icon,label,v,href})=>(
                 <div key={label} className="gcard" style={{ padding:'16px', display:'flex', gap:'14px', alignItems:'center' }}>
                   <div style={{ width:38,height:38,borderRadius:'10px',background:'rgba(0,198,255,0.08)',

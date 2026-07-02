@@ -62,7 +62,7 @@ export default function Hero() {
               <p className="stag mb-3">Hello, I'm</p>
               <h1 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(40px,7vw,76px)',
                 fontWeight:700, lineHeight:0.95, letterSpacing:'-2px', marginBottom:'12px' }}>
-                <span style={{ color:'#fff' }}>Jainul</span><br/>
+                <span style={{ color:'#fff' }}>Md Jainul</span><br/>
                 <span style={{ color:'#fff' }}>Haq </span>
                 <span className="g-text">Khan</span>
               </h1>
@@ -71,7 +71,7 @@ export default function Hero() {
             {/* Typing */}
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.55}}
               style={{ marginTop:'16px', marginBottom:'20px', height:'40px',
-                display:'flex', alignItems:'center', justifyContent: 'center' }}
+                display:'flex', alignItems:'center' }}
               className="lg:justify-start">
               {/* <span style={{ color:'rgba(0,198,255,0.5)', fontFamily:'JetBrains Mono', fontSize:'18px', marginRight:'8px' }}>&gt;</span> */}
               <TypeAnimation
@@ -79,8 +79,8 @@ export default function Hero() {
                   'React.js Developer', 2000,
                   'Next.js Developer', 2000,
                   'Frontend Developer', 2000,
-                  'UI Performance Expert', 2000,
-                  'Core Web Vitals Pro', 2000,
+                  'UI Developer', 2000,
+                  // 'Core Web Vitals Pro', 2000,
                 ]}
                 wrapper="span"
                 speed={55} repeat={Infinity}
@@ -93,11 +93,11 @@ export default function Hero() {
 
             {/* Stats row */}
             <motion.div initial={{opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{delay:0.7}}
-              style={{ display:'flex', flexWrap:'wrap', gap:'24px', justifyContent:'center',
+              style={{ display:'flex', flexWrap:'wrap', gap:'24px',
                 marginBottom:'24px' }} className="lg:justify-start">
               {[
                 {n:'7+',l:'Years Exp'},{n:'3+',l:'React Years'},
-                {n:'40%',l:'Perf Boost'},{n:'95+',l:'Lighthouse'},
+                {n:'40%',l:'Perf Boost'},{n:'90+',l:'Lighthouse'},
               ].map(s=>(
                 <div key={s.l} style={{ textAlign:'center' }}>
                   <div style={{ fontFamily:'Space Grotesk', fontSize:'26px', fontWeight:700, color:'#00C6FF',
@@ -113,16 +113,15 @@ export default function Hero() {
               style={{ color:'rgba(203,213,225,0.6)', fontSize:'16px', lineHeight:'1.75',
                 maxWidth:'520px', marginBottom:'32px', fontFamily:'Inter' }}
               className="mx-auto lg:mx-0">
-              Crafting scalable, high-performance web apps with{' '}
+              Building scalable, high-performance web applications with{' '}
               <span className="c-text" style={{fontWeight:500}}>React.js</span> &{' '}
               <span className="v-text" style={{fontWeight:500}}>Next.js</span>.
-              Focused on <span className="a-text" style={{fontWeight:500}}>Core Web Vitals</span>,
-              pixel-perfect UI, and reusable component architecture.
+              Focused on <span className="a-text" style={{fontWeight:500}}>responsive UI, REST API integration, Lazy Loading, Code Splitting</span>, reusable components, pixel-perfect interfaces, and modern frontend architecture.
             </motion.p>
 
             {/* CTAs */}
             <motion.div initial={{opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{delay:0.92}}
-              style={{ display:'flex', flexWrap:'wrap', gap:'12px', justifyContent:'center',
+              style={{ display:'flex', flexWrap:'wrap', gap:'12px',
                 marginBottom:'36px' }} className="lg:justify-start">
               <a href="#projects" className="btn-p">
                 <span>View Projects</span>
@@ -163,7 +162,7 @@ export default function Hero() {
               ))}
               <div style={{ height:1, width:40, background:'linear-gradient(90deg,rgba(0,198,255,0.4),transparent)' }}/>
               <span style={{ fontFamily:'JetBrains Mono', fontSize:'10px', color:'rgba(255,255,255,0.25)', letterSpacing:'1px' }}>
-                Delhi NCR
+                Noida, Delhi NCR, India
               </span>
             </motion.div>
           </div>
@@ -240,8 +239,8 @@ export default function Hero() {
                   borderRadius:'12px', padding:'8px 13px', zIndex:2,
                   display:'flex', alignItems:'center', gap:'7px',
                   boxShadow:'0 8px 30px rgba(0,0,0,0.45)' }}>
-                <span style={{fontSize:'14px'}}>⚡</span>
-                <span style={{fontFamily:'JetBrains Mono',fontSize:'12px',color:'#FCD34D',fontWeight:500}}>95+ Score</span>
+                <span style={{fontSize:'14px'}}>TW</span>
+                <span style={{fontFamily:'JetBrains Mono',fontSize:'12px',color:'#FCD34D',fontWeight:500}}>Tailwind CSS</span>
               </motion.div>
 
               {/* TypeScript badge */}
@@ -251,8 +250,8 @@ export default function Hero() {
                   borderRadius:'12px', padding:'8px 13px', zIndex:2,
                   display:'flex', alignItems:'center', gap:'7px',
                   boxShadow:'0 8px 30px rgba(0,0,0,0.45)' }}>
-                <span style={{fontSize:'14px',color:'#3178C6',fontWeight:'bold'}}>TS</span>
-                <span style={{fontFamily:'JetBrains Mono',fontSize:'12px',color:'#6EE7B7',fontWeight:500}}>TypeScript</span>
+                <span style={{fontSize:'14px',color:'#3178C6',fontWeight:'bold'}}>JS</span>
+                <span style={{fontFamily:'JetBrains Mono',fontSize:'12px',color:'#6EE7B7',fontWeight:500}}>JavaScript</span>
               </motion.div>
             </div>
           </motion.div>

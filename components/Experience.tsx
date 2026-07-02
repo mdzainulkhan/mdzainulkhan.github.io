@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Calendar, MapPin } from 'lucide-react'
+import { features } from 'process'
 
 const exp = [
   {
@@ -11,19 +12,20 @@ const exp = [
     loc:'Delhi NCR',
     current:true,
     pts:[
-      'Developed scalable, responsive frontend apps with React.js, Next.js & Tailwind CSS for high-traffic platforms',
-      'Engineered reusable component architecture with React Hooks, improving dev efficiency by ~25%',
+      'Developed scalable and responsive frontend applications using React.js, Next.js, JavaScript, and Tailwind CSS.',
+      'Built reusable UI components for dashboard, authentication, forms, listing pages, and dynamic modules, improving development speed and code maintainability.',
       'Optimized performance via lazy loading & code splitting — Lighthouse 85–95+ consistently',
       'Reduced page load time by up to 40%, improving Core Web Vitals & user engagement',
       'Integrated 10+ REST APIs using Fetch/Axios for dynamic, data-driven interfaces',
-      'Maintained WCAG accessibility standards & SEO-friendly structure across all projects',
+      'Converted Figma designs into pixel-perfect, mobile-first, and cross-browser compatible user interfaces.',
+      'Collaborated with backend developers and QA teams in an Agile environment to deliver production-ready frontend features.'
     ],
-    tags:['React.js','Next.js','Tailwind CSS','TypeScript','Core Web Vitals','REST APIs'],
+    tags:['React.js','Next.js', 'JavaScript ES6+', 'TypeScript', 'Tailwind CSS','Core Web Vitals','REST APIs'],
   },
   {
     role:'Frontend Developer',
     co:'Infoicon Technologies',
-    period:'Sep 2023 – Jul 2024',
+    period:'Oct 2023 – Jul 2024',
     loc:'Delhi NCR',
     current:false,
     pts:[
@@ -33,12 +35,12 @@ const exp = [
       'Implemented WCAG & ARIA standards, improving usability & compliance',
       'Coordinated with clients & cross-functional teams for on-time delivery',
     ],
-    tags:['React.js','HTML5','CSS3','Bootstrap','WCAG','ARIA'],
+    tags:['React.js','Next.js', 'HTML5','CSS3', 'Tailwind CSS', 'Bootstrap','WCAG','ARIA'],
   },
   {
     role:'Frontend Developer',
     co:'Cliffex Software Solutions',
-    period:'Oct 2022 – Sep 2023',
+    period:'Nov 2022 – Sep 2023',
     loc:'Delhi NCR',
     current:false,
     pts:[
@@ -47,13 +49,13 @@ const exp = [
       'Improved routing & performance for faster loads and smoother navigation',
       'Ensured mobile-first design consistency across all devices & screen sizes',
     ],
-    tags:['React.js','JavaScript','Figma','Adobe XD','Mobile-First'],
+    tags:['React.js','JavaScript', 'Tailwind CSS' ,'Figma','Adobe XD','Mobile-First'],
   },
   {
     role:'Senior Web Designer',
     co:'B. Jain Publishers',
-    period:'May 2021 – Oct 2022',
-    loc:'Delhi NCR',
+    period:'June 2021 – Oct 2022',
+    loc:'Noida',
     current:false,
     pts:[
       'Designed & developed responsive UI for eCommerce & publishing platforms',
@@ -67,7 +69,7 @@ const exp = [
     role:'Web Designer',
     co:'Goyal Brothers Prakashan',
     period:'Jul 2018 – May 2021',
-    loc:'Delhi NCR',
+    loc:'Noida',
     current:false,
     pts:[
       'PSD-to-HTML conversion for 25+ publications with pixel accuracy',
