@@ -50,7 +50,7 @@ export default function About() {
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                   <span className="spill" style={{ fontSize: '11px', padding: '3px 10px' }}>React.js</span>
                   <span className="spill spill-v" style={{ fontSize: '11px', padding: '3px 10px' }}>Next.js</span>
-                  <span className="spill spill-g" style={{ fontSize: '11px', padding: '3px 10px' }}>TypeScript</span>
+                  <span className="spill spill-g" style={{ fontSize: '11px', padding: '3px 10px' }}>Tailwind CSS</span>
                 </div>
               </div>
             </div>
