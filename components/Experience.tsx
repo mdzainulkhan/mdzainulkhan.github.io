@@ -6,8 +6,8 @@ import { features } from 'process'
 
 const exp = [
   {
-    role: 'Frontend Developer',
-    co: 'Independent Frontend Developer',
+    role: 'Independent Frontend Developer',
+    co: 'Freelance & Personal Projects',
     period: 'Aug 2024 – June 2026',
     loc: 'Delhi NCR',
     current: true,
