@@ -12,11 +12,11 @@ export default function Footer() {
               <span className="g-text">JHK</span>
               <span style={{ color:'rgba(255,255,255,0.2)', margin:'0 8px' }}>·</span>
               <span style={{ color:'rgba(255,255,255,0.35)', fontSize:'13px', fontWeight:400, fontFamily:'Inter' }}>
-                Jainul Haq Khan
+                Md Jainul Haq Khan
               </span>
             </div>
             <p style={{ fontFamily:'JetBrains Mono', color:'rgba(255,255,255,0.25)', fontSize:'11px' }}>
-              Frontend Developer · React.js & Next.js · Delhi NCR
+              Frontend Developer · React.js & Next.js · Noida, Delhi NCR
             </p>
           </div>
 

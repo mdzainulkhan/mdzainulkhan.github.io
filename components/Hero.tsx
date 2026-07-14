@@ -134,7 +134,7 @@ export default function Hero() {
 
             {/* Socials */}
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1.1}}
-              style={{ display:'flex', alignItems:'center', gap:'12px', justifyContent:'center' }}
+              style={{ display:'flex', alignItems:'center', gap:'12px', justifyContent:'start' }}
               className="lg:justify-start">
               {[
                 {Icon:Github,href:'https://github.com/mdzainulkhan',label:'GitHub'},
@@ -199,7 +199,7 @@ export default function Hero() {
               }}>
                 <Image
                   src="/profile.jpg"
-                  alt="Jainul Haq Khan - Frontend Developer"
+                  alt="Md Jainul Haq Khan - Frontend Developer"
                   fill
                   style={{ objectFit:'cover', objectPosition:'center top' }}
                   priority
