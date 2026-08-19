@@ -61,7 +61,7 @@ export default function About() {
             }}>
               <p>
                 <span style={{ color: '#fff', fontWeight: 500 }}>Frontend Developer</span> with{' '}
-                <span style={{ color: '#00C6FF' }}>7+ years</span> of overall experience and{' '}
+                <span style={{ color: '#00C6FF' }}>8 years</span> of overall experience and{' '}
                 <span style={{ color: '#00C6FF' }}>3+ years</span> of hands-on expertise in{' '}
                 <span style={{ color: '#A78BFA' }}>React.js & Next.js</span>.
               </p>
