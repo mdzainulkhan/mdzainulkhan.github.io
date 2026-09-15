@@ -27,7 +27,7 @@ export default function Skills() {
             Technical <span className="g-text">Skills</span>
           </h2>
           <p style={{ color:'rgba(203,213,225,0.45)', marginTop:'12px', fontFamily:'Inter', fontSize:'15px' }}>
-            7+ years across the modern frontend stack
+            9 years across the modern frontend stack
           </p>
         </motion.div>
 

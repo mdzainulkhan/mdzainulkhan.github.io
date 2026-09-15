@@ -1,4 +1,4 @@
-# Md Jainul Haq Khan
+# Jainul Khan
 🌐 Portfolio - https://jainulhk.vercel.app/
 📧 jainulhk.dev@gmail.com
 
@@ -73,4 +73,4 @@ npm start
 
 ---
 
-Built by Md Jainul Haq Khan · jainulhk.dev@gmail.com
+Built by Jainul Khan · jainulhk.dev@gmail.com

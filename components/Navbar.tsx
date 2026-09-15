@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" style={{ textDecoration: 'none' }}>
             <span style={{ fontFamily:'Space Grotesk', fontWeight:700, fontSize:'20px' }}>
-              <span className="g-text">JHK</span>
+              <span className="g-text">JK</span>
               <span style={{ color:'rgba(255,255,255,0.2)', margin:'0 6px' }}>·</span>
               <span style={{ color:'rgba(255,255,255,0.4)', fontSize:'13px', fontWeight:400, fontFamily:'JetBrains Mono' }}>dev</span>
             </span>

@@ -17,9 +17,9 @@ const projects = [
     border:'rgba(0,198,255,0.2)', accent:'#00C6FF',
   },
   {
-    name:'AllConvertHub',
+    name:'ConvertHub360',
     sub:'Online Utility Platform',
-    url:'https://allconverthub.com',
+    url:'https://converthub360.vercel.app/',
     live:true,
     score:null,
     desc:'10+ browser-based utility tools — Text-to-Speech, Speech-to-Text, image conversion & PDF tools — all client-side using native browser APIs.',

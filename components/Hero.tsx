@@ -62,9 +62,9 @@ export default function Hero() {
               <p className="stag mb-3">Hello, I'm</p>
               <h1 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(40px,7vw,76px)',
                 fontWeight:700, lineHeight:0.95, letterSpacing:'-2px', marginBottom:'12px' }}>
-                <span style={{ color:'#fff' }}>Md Jainul</span><br/>
-                <span style={{ color:'#fff' }}>Haq </span>
-                <span className="g-text">Khan</span>
+                <span style={{ color:'#fff' }}>Jainul <span className="g-text">Khan</span></span> 
+                
+                {/* <span style={{ color:'#fff' }}>Haq </span> */}
               </h1>
             </motion.div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
               style={{ display:'flex', flexWrap:'wrap', gap:'24px',
                 marginBottom:'24px' }} className="lg:justify-start">
               {[
-                {n:'8',l:'Years Exp'},{n:'3+',l:'React Years'},
+                {n:'9',l:'Years Exp'},{n:'3+',l:'React Years'},
                 {n:'40%',l:'Perf Boost'},{n:'90+',l:'Lighthouse'},
               ].map(s=>(
                 <div key={s.l} style={{ textAlign:'center' }}>
@@ -199,7 +199,7 @@ export default function Hero() {
               }}>
                 <Image
                   src="/profile.jpg"
-                  alt="Md Jainul Haq Khan - Frontend Developer"
+                  alt="Jainul Khan - Frontend Developer"
                   fill
                   style={{ objectFit:'cover', objectPosition:'center top' }}
                   priority

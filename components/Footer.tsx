@@ -9,10 +9,10 @@ export default function Footer() {
           justifyContent:'space-between', gap:'20px' }}>
           <div>
             <div style={{ fontFamily:'Space Grotesk', fontSize:'18px', fontWeight:700, marginBottom:'4px' }}>
-              <span className="g-text">JHK</span>
+              <span className="g-text">JK</span>
               <span style={{ color:'rgba(255,255,255,0.2)', margin:'0 8px' }}>·</span>
               <span style={{ color:'rgba(255,255,255,0.35)', fontSize:'13px', fontWeight:400, fontFamily:'Inter' }}>
-                Md Jainul Haq Khan
+                Jainul Khan
               </span>
             </div>
             <p style={{ fontFamily:'JetBrains Mono', color:'rgba(255,255,255,0.25)', fontSize:'11px' }}>

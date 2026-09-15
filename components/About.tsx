@@ -42,7 +42,7 @@ export default function About() {
               </div>
               <div>
                 <p style={{ fontFamily: 'Space Grotesk', color: '#fff', fontWeight: 600, fontSize: '17px', marginBottom: '3px' }}>
-                  Md Jainul Haq Khan
+                  Jainul Khan
                 </p>
                 <p style={{ fontFamily: 'JetBrains Mono', color: 'rgba(0,198,255,0.7)', fontSize: '12px', marginBottom: '4px' }}>
                   Frontend Developer · Delhi NCR
@@ -61,7 +61,7 @@ export default function About() {
             }}>
               <p>
                 <span style={{ color: '#fff', fontWeight: 500 }}>Frontend Developer</span> with{' '}
-                <span style={{ color: '#00C6FF' }}>8 years</span> of overall experience and{' '}
+                <span style={{ color: '#00C6FF' }}>9 years</span> of overall experience and{' '}
                 <span style={{ color: '#00C6FF' }}>3+ years</span> of hands-on expertise in{' '}
                 <span style={{ color: '#A78BFA' }}>React.js & Next.js</span>.
               </p>

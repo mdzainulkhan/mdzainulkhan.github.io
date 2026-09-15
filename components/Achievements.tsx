@@ -10,7 +10,7 @@ const stats = [
   {v:25,sfx:'+',label:'Projects Delivered',Icon:Target,c:'#A78BFA'},
   {v:50,sfx:'+',label:'Designs Converted',Icon:Palette,c:'#FCD34D'},
   {v:18,sfx:'%',label:'Bounce Rate Reduced',Icon:Star,c:'#F87171'},
-  {v:8,sfx:'+',label:'Years Experience',Icon:Code,c:'#00C6FF'},
+  {v:9,sfx:'+',label:'Years Experience',Icon:Code,c:'#00C6FF'},
 ]
 
 function Counter({v, inView}:{v:number; inView:boolean}) {
@@ -28,7 +28,7 @@ const achs = [
   'Delivered 25+ responsive, pixel-accurate frontend projects across multiple business domains',
   'Reduced client bounce rate by 18% at B. Jain Publishers through UI & SEO improvements',
   'Built & deployed 2 live public products (IndiaResultLive & AllConvertHub) from scratch',
-  'Converted 50+ Figma/PSD/XD designs into responsive, production-ready interfaces over 7+ years',
+  'Converted 50+ Figma/PSD/XD designs into responsive, production-ready interfaces over 9 years',
 ]
 
 export default function Achievements() {

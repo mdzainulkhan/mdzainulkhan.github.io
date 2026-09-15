@@ -8,8 +8,8 @@ const exp = [
   {
     role: 'Frontend Developer',
     co: 'Indai Technologies',
-    period: 'Aug 2024 – June 2026',
-    loc: 'Delhi NCR',
+    period: 'Aug 2024 – Present',
+    loc: 'Delhi',
     current: true,
     pts: ['Built responsive React.js and Next.js web applications on a reusable component architecture, cutting new-feature UI development time by an estimated 25–30%.',
 
@@ -23,8 +23,8 @@ const exp = [
   {
     role: 'Frontend Developer',
     co: 'Infoicon Technologies',
-    period: 'Nov 2022 – Jul 2024',
-    loc: 'Delhi NCR',
+    period: 'Oct 2023 – Jul 2024',
+    loc: 'Noida',
     current: false,
     pts: [
       'Built data-driven frontend features using React.js, React Hooks, and reusable components across 8+ application modules, cutting duplicate code by an estimated 20% through shared UI patterns.',
@@ -36,24 +36,24 @@ const exp = [
     ],
     tags: ['React.js', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'WCAG', 'ARIA'],
   },
-  // {
-  //   role: 'Frontend Developer',
-  //   co: 'Cliffex Software Solutions',
-  //   period: 'Nov 2022 – Sep 2023',
-  //   loc: 'Delhi NCR',
-  //   current: false,
-  //   pts: [
-  //     'Transitioned from web design to frontend dev — React.js & modern JavaScript',
-  //     'Converted Figma, Adobe XD & PSD designs into responsive cross-browser interfaces',
-  //     'Improved routing & performance for faster loads and smoother navigation',
-  //     'Ensured mobile-first design consistency across all devices & screen sizes',
-  //   ],
-  //   tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Adobe XD', 'Mobile-First'],
-  // },
+  {
+    role: 'Frontend Developer',
+    co: 'Cliffex Software Solutions',
+    period: 'Oct 2022 – Sep 2023',
+    loc: 'Noida',
+    current: false,
+    pts: [
+      'Transitioned from web design to frontend dev — React.js & modern JavaScript',
+      'Converted Figma, Adobe XD & PSD designs into responsive cross-browser interfaces',
+      'Improved routing & performance for faster loads and smoother navigation',
+      'Ensured mobile-first design consistency across all devices & screen sizes',
+    ],
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Adobe XD', 'Mobile-First'],
+  },
   {
     role: 'UI Developer',
     co: 'B. Jain Publishers',
-    period: 'June 2021 – Oct 2022',
+    period: 'Jun 2021 – Sep 2022',
     loc: 'Noida',
     current: false,
     pts: [
@@ -67,7 +67,7 @@ const exp = [
   {
     role: 'Web Designer',
     co: 'Goyal Brothers Prakashan',
-    period: 'Jul 2018 – May 2021',
+    period: 'Sep 2017 – May 2021',
     loc: 'Noida',
     current: false,
     pts: [
