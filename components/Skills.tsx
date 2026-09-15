@@ -6,9 +6,9 @@ const groups = [
   { label:'Frontend Core', cls:'spill', skills:['React.js','Next.js','TypeScript','JavaScript ES6+','HTML5','CSS3'] },
   { label:'React Ecosystem', cls:'spill spill-v', skills:['React Hooks','Context API','React Router','SSR / SSG','Component Architecture','Code Splitting','Lazy Loading'] },
   { label:'Styling & UI', cls:'spill spill-a', skills:['Tailwind CSS','Bootstrap 5','Sass / SCSS','Responsive Design','Mobile-First','Figma','Adobe XD'] },
-  { label:'API & Data', cls:'spill spill-g', skills:['REST APIs','Axios','Fetch API','Dynamic Rendering','Web Speech API','Canvas API','FileReader API'] },
+  { label:'API & Data', cls:'spill spill-g', skills:['REST APIs','Axios','Fetch API','Dynamic Rendering'] },
   { label:'Performance & SEO', cls:'spill', skills:['Core Web Vitals','Lighthouse','Bundle Optimization','SEO Optimization','Google Search Console','SSR/SSG'] },
-  { label:'Tools & Platforms', cls:'spill spill-v', skills:['Git & GitHub','Vercel','Netlify','NPM','CI/CD','VS Code','Photoshop','Canva'] },
+  { label:'Tools & Platforms', cls:'spill spill-v', skills:['Git & GitHub','Vercel','Netlify','NPM','CI/CD','VS Code'] },
   { label:'Accessibility', cls:'spill spill-g', skills:['WCAG','ARIA','Semantic HTML','Cross-Browser','Screen Readers'] },
 ]
 
