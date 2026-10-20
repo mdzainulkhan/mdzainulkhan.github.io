@@ -5,11 +5,11 @@ import { useInView } from 'react-intersection-observer'
 const groups = [
   { label:'Frontend Core', cls:'spill', skills:['React.js','Next.js','TypeScript','JavaScript ES6+','HTML5','CSS3'] },
   { label:'React Ecosystem', cls:'spill spill-v', skills:['React Hooks','Context API','React Router','SSR / SSG','Component Architecture','Code Splitting','Lazy Loading'] },
-  { label:'Styling & UI', cls:'spill spill-a', skills:['Tailwind CSS','Bootstrap 5','Sass / SCSS','Responsive Design','Mobile-First','Figma','Adobe XD'] },
+  { label:'Styling & UI', cls:'spill spill-a', skills:['Tailwind CSS','Bootstrap 5','Sass / SCSS','Responsive Design','Mobile-First'] },
   { label:'API & Data', cls:'spill spill-g', skills:['REST APIs','Axios','Fetch API','Dynamic Rendering'] },
   { label:'Performance & SEO', cls:'spill', skills:['Core Web Vitals','Lighthouse','Bundle Optimization','SEO Optimization','Google Search Console','SSR/SSG'] },
-  { label:'Tools & Platforms', cls:'spill spill-v', skills:['Git & GitHub','Vercel','Netlify','NPM','CI/CD','VS Code'] },
-  { label:'Accessibility', cls:'spill spill-g', skills:['WCAG','ARIA','Semantic HTML','Cross-Browser','Screen Readers'] },
+  { label:'Tools & Platforms', cls:'spill spill-v', skills:['Git & GitHub','Vercel','Netlify','NPM', 'VS Code'] },
+  { label:'Accessibility', cls:'spill spill-g', skills:['WCAG','ARIA','Semantic HTML','Cross-Browser'] },
 ]
 
 export default function Skills() {
@@ -26,9 +26,9 @@ export default function Skills() {
           <h2 style={{ fontFamily:'Space Grotesk', fontSize:'clamp(32px,5vw,48px)', fontWeight:700, color:'#fff' }}>
             Technical <span className="g-text">Skills</span>
           </h2>
-          <p style={{ color:'rgba(203,213,225,0.45)', marginTop:'12px', fontFamily:'Inter', fontSize:'15px' }}>
-            9 years across the modern frontend stack
-          </p>
+          {/* <p style={{ color:'rgba(203,213,225,0.45)', marginTop:'12px', fontFamily:'Inter', fontSize:'15px' }}>
+            5.5 years across the modern frontend stack
+          </p> */}
         </motion.div>
 
         <div style={{ display:'flex', flexDirection:'column', gap:'32px' }}>

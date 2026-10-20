@@ -45,11 +45,12 @@ export default function About() {
                   Jainul Khan
                 </p>
                 <p style={{ fontFamily: 'JetBrains Mono', color: 'rgba(0,198,255,0.7)', fontSize: '12px', marginBottom: '4px' }}>
-                  Frontend Developer · Delhi NCR
+                  Frontend Developer · Noida, India
                 </p>
                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                   <span className="spill" style={{ fontSize: '11px', padding: '3px 10px' }}>React.js</span>
                   <span className="spill spill-v" style={{ fontSize: '11px', padding: '3px 10px' }}>Next.js</span>
+                  <span className="spill spill-v" style={{ fontSize: '11px', padding: '3px 10px' }}>JavaScript</span>
                   <span className="spill spill-g" style={{ fontSize: '11px', padding: '3px 10px' }}>Tailwind CSS</span>
                 </div>
               </div>
@@ -61,8 +62,8 @@ export default function About() {
             }}>
               <p>
                 <span style={{ color: '#fff', fontWeight: 500 }}>Frontend Developer</span> with{' '}
-                <span style={{ color: '#00C6FF' }}>9 years</span> of overall experience and{' '}
-                <span style={{ color: '#00C6FF' }}>3+ years</span> of hands-on expertise in{' '}
+                <span style={{ color: '#00C6FF' }}>5.5 years</span> of overall experience and{' '}
+                <span style={{ color: '#00C6FF' }}>2+ years</span> of hands-on expertise in{' '}
                 <span style={{ color: '#A78BFA' }}>React.js & Next.js</span>.
               </p>
               <p>

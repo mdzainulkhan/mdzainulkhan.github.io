@@ -96,8 +96,8 @@ export default function Hero() {
               style={{ display:'flex', flexWrap:'wrap', gap:'24px',
                 marginBottom:'24px' }} className="lg:justify-start">
               {[
-                {n:'9',l:'Years Exp'},{n:'3+',l:'React Years'},
-                {n:'40%',l:'Perf Boost'},{n:'90+',l:'Lighthouse'},
+                {n:'5+',l:'Years Exp'},{n:'2+',l:'React Years'},
+                {n:'30%',l:'Perf Boost'},{n:'90+',l:'Lighthouse'},
               ].map(s=>(
                 <div key={s.l} style={{ textAlign:'center' }}>
                   <div style={{ fontFamily:'Space Grotesk', fontSize:'26px', fontWeight:700, color:'#00C6FF',
